@@ -1,15 +1,10 @@
 package hello.hellospring.controller;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @Controller
 public class HelloController {
@@ -55,14 +50,14 @@ public class HelloController {
         }
     }
 
-    @RestController
-    @RequiredArgsConstructor
+//    @RestController
+//    @RequiredArgsConstructor
     // lambok 을 설치해야 사용할수 있는 기능
-    public class SizeLimitController{
-        @GetMapping("/hello2")
-        public ResponseEntity<List<Long>> boardList(@RequestParam List<Long> ids){
-            return ResponseEntity.ok(ids);
-        }
-    }
+//    public class SizeLimitController{
+//        @GetMapping("/hello2")
+//        public ResponseEntity<List<Long>> boardList(@RequestParam List<Long> ids){
+//            return ResponseEntity.ok(ids);
+//        }
+//    }
 
 }

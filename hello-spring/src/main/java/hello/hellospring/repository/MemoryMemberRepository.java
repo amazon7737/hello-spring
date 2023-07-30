@@ -1,7 +1,6 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
@@ -23,7 +22,6 @@ import java.util.*;
  * 참고: 스프링 컨테이너에 스프링 빈 등록할때 , 기본으로 싱글톤으로 등록 (유일하게 하나만 등록해서 공유)
  * 같은 스프링 빈이면 모두 같은 인스턴스, 특별한 경우 제외 대부분 싱글톤 사용
  */
-@Repository
 public class MemoryMemberRepository implements MemberRepository{
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
